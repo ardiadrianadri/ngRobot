@@ -9,6 +9,11 @@
       "version": "2.0.0"
     }
   },
+  "scripts":{
+    "start": "tns run android --emulator",
+    "test": "tns test android --emulator",
+    "live": "tns livesync android --emulator --watch"
+  },
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
     "@angular/compiler": "2.0.0-rc.1",
