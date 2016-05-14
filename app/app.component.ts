@@ -1,7 +1,9 @@
 import {Component} from "@angular/core";
+import {OrderComponent} from "./atoms/order/order.component";
 
 @Component({
     selector: "my-app",
+    directives: [OrderComponent],
     template: `
 <StackLayout>
     <Label text="Tap the button" class="title"></Label>
@@ -9,6 +11,7 @@ import {Component} from "@angular/core";
     <Button text="TAP" (tap)="onTap()"></Button>
 
     <Label [text]="message" class="message" textWrap="true"></Label>
+    <ng-robot-order></ng-robot-order>
 </StackLayout>
 `,
 })
