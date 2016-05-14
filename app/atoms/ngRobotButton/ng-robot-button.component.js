@@ -1,16 +1,22 @@
 "use strict";
+var ng_robot_button_1 = require('./ng-robot-button');
 var core_1 = require('@angular/core');
 var NgRobotButtonComponent = (function () {
     function NgRobotButtonComponent() {
         this.ngRobotButton = null;
     }
+    NgRobotButtonComponent.prototype.ngOnInit = function () {
+        this.ngRobotButton = new ng_robot_button_1.NgRobotButton('botonPrueba1', function () {
+            alert('prueba');
+        });
+    };
     NgRobotButtonComponent.prototype.runCallback = function () {
-        this.ngRobotButton.getCallback();
+        this.ngRobotButton.runCallback();
     };
     NgRobotButtonComponent = __decorate([
         core_1.Component({
             selector: 'ng-robot-button',
-            template: 'ng-robot-button.template.html'
+            templateUrl: 'atoms/ngRobotButton/ng-robot-button.template.html'
         }), 
         __metadata('design:paramtypes', [])
     ], NgRobotButtonComponent);

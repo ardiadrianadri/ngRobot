@@ -1,19 +1,19 @@
-import {Component} from "@angular/core";
+import {Component, Directive} from "@angular/core";
 import {NgRobotButtonComponent} from "./atoms/ngRobotButton/ng-robot-button.component"
 
 @Component({
     selector: "my-app",
     template: `
-<StackLayout>
-    <Label text="Tap the button" class="title"></Label>
-    
-    <Button text="TAP" (tap)="onTap()"></Button>
+        <StackLayout>
+            <Label text="Tap the button" class="title"></Label>
+            
+            <Button text="TAP" (tap)="onTap()"></Button>
 
-    <ng-robot-button></ng-robot-button>
+            <ng-robot-button></ng-robot-button>
 
-    <Label [text]="message" class="message" textWrap="true"></Label>
-</StackLayout>
-`,
+            <Label [text]="message" class="message" textWrap="true"></Label>
+        </StackLayout>
+    `,
     directives: [NgRobotButtonComponent]
 })
 export class AppComponent {

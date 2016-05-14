@@ -1,14 +1,20 @@
 import { NgRobotButton } from './ng-robot-button';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'ng-robot-button',
-	template: 'ng-robot-button.template.html'
+	templateUrl: 'atoms/ngRobotButton/ng-robot-button.template.html'
 })
-export class NgRobotButtonComponent {
+export class NgRobotButtonComponent implements OnInit{
 	private ngRobotButton: NgRobotButton = null;
 
-	public runCallback() {
-		this.ngRobotButton.getCallback();
+	ngOnInit() {
+		this.ngRobotButton = new NgRobotButton('botonPrueba1', function() {
+			alert('prueba');
+		});
 	}
-} 
+
+	public runCallback() {
+		this.ngRobotButton.runCallback();
+	}
+}

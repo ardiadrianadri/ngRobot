@@ -1,17 +1,13 @@
 export class NgRobotButton {
+	public buttonName: string = null;
 	private callback: any = null;
-	private imageURL: string = null;
 
-	public _constructor(callback: any, imageURL: string) {
+	public constructor(buttonName: string, callback: any) {
+		this.buttonName = buttonName;
 		this.callback = callback;
-		this.imageURL = imageURL;
 	}
 
-	public getCallback(): any {
-		return this.callback;
-	}
-
-	public getImageURL(): string {
-		return this.imageURL;	
+	public runCallback(): any {
+		this.callback();
 	}
 }
