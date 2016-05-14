@@ -9,7 +9,7 @@
       "version": "2.0.0"
     }
   },
-  "scripts":{
+  "scripts": {
     "start": "tns run android --emulator",
     "test": "tns test android --emulator",
     "live": "tns livesync android --emulator --watch"
@@ -28,6 +28,7 @@
     "lazy": "^1.0.11",
     "nativescript-angular": "0.1.1",
     "nativescript-unit-test-runner": "^0.3.3",
+    "nativescript-websockets": "^1.2.0",
     "tns-core-modules": "^2.0.0"
   },
   "devDependencies": {
