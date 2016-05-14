@@ -25,6 +25,7 @@ var AppComponent = (function () {
             selector: "my-app",
             directives: [order_component_1.OrderComponent],
             template: "\n<StackLayout>\n    <Label text=\"Tap the button\" class=\"title\"></Label>\n    \n    <Button text=\"TAP\" (tap)=\"onTap()\"></Button>\n\n    <Label [text]=\"message\" class=\"message\" textWrap=\"true\"></Label>\n    <ng-robot-order></ng-robot-order>\n</StackLayout>\n",
+
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
