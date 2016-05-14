@@ -1,3 +1,5 @@
-/**
- * Created by aferrere on 14/05/2016.
- */
+import {Component} from '@angular/core';
+
+@Component({
+    selector:'oreder-rails'
+})
