@@ -2,3 +2,5 @@ node_modules
 hooks
 platforms
 .idea
+/app/**/*.js
+/app/**/*.js.map
