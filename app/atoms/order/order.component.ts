@@ -8,10 +8,10 @@ import {StoreOrder} from "../storeOrder/storeOrder.service";
 		templateUrl: "atoms/order/order.html",
 		inputs: ['orders']
 })
-export class OrderComponent implements OnInit{
-	private orders: Array<Order>;
+export class OrderComponent implements OnInit {
+  private orders: Array<Order>;
 
-	constructor(private storeOrder: StoreOrder) { }
+  constructor(private storeOrder: StoreOrder) { }
 
 		ngOnInit(){
 
@@ -56,3 +56,4 @@ export class OrderComponent implements OnInit{
 		}*/
 
 }
+*/
