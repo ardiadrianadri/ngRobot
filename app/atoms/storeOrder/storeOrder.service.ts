@@ -7,6 +7,7 @@ export class StoreOrder {
 
     setOrder (order:Order){
         this.order = order;
+        console.log("[StoreOrder] setOrder: "+JSON.stringify(order));
     }
 
     getOrder ():Order {
