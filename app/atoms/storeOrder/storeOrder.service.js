@@ -3,11 +3,9 @@ var core_1 = require("@angular/core");
 var StoreOrder = (function () {
     function StoreOrder() {
     }
-    //TODO Poner el tipo que corresponda al parametro de entradea
     StoreOrder.prototype.setOrder = function (order) {
         this.order = order;
     };
-    //TODO Poner el tipo que corresponda de retorno
     StoreOrder.prototype.getOrder = function () {
         return this.order;
     };

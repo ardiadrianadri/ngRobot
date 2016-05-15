@@ -1,0 +1,28 @@
+<!--<StackLayout>
+	<ListView [items]="orders" (itemTap)="onItemTap($event)">
+		<template let-item="item">      
+			<StackLayout>
+	        	<ng-robot-order [value]="item.value"></ng-robot-order>
+	    	</StackLayout>
+	    </template>
+	</ListView>
+</StackLayout>-->
+
+<GridLayout rows="auto, *">
+
+  <GridLayout row="0" columns="*, auto" >
+  </GridLayout>
+
+  <ListView [items]="orders" row="1">
+    <template let-item="item">
+      <GridLayout columns="*, auto">
+        <Label col="0" [text]="item.value"></Label>
+        <StackLayout col="1" (tap)="delete(item)">
+          <Image [src]="item.value"></Image>
+        </StackLayout>
+      </GridLayout>
+    </template>
+  </ListView>
+
+
+</GridLayout>
