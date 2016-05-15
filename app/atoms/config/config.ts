@@ -1,10 +1,12 @@
-
-export class Config {
-    websocketConfig = {
+declare const Config = {
+    websocketConfig: {
         url: 'ws://localhost',
-        params:{
+        params: {
             timeout: 3000,
-            allowCellular:true
+            allowCellular: true
+        },
+        code:{
+            noMoreOrders:'001'
         }
     }
-}
+};
