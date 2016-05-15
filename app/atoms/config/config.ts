@@ -4,5 +4,7 @@ export const Config = {
     },
     railsConfig:{
         style: 'rail-play'
-    }
+    },
+    imagePrefix:'~/images/',
+    imageSufix:'.png'
 };

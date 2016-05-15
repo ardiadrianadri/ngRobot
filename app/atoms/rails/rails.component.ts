@@ -4,6 +4,7 @@ import {StoreOrder} from '../storeOrder/storeOrder.service'
 import {Order} from "../order/order";
 import {OrderComponent} from "../order/order.component";
 import {HTTP_PROVIDERS} from "@angular/http";
+import {SimpleOrder} from "../SimpleOrder/SimpleOrder.component";
 
 
 @Component({
@@ -11,7 +12,7 @@ import {HTTP_PROVIDERS} from "@angular/http";
     templateUrl:'atoms/rails/rails.template.html',
     styleUrls:['atoms/rails/rails.style.css'],
     providers:[RailsService, StoreOrder, HTTP_PROVIDERS],
-    directives:[OrderComponent]
+    directives:[OrderComponent,SimpleOrder]
 })
 export class NgRailsComponent implements OnInit{
 
@@ -37,11 +38,11 @@ export class NgRailsComponent implements OnInit{
         order4.value="speaker";
         order5.value="eye";
         
-        order1.image="~/images/"+order1.value+".png";
-        order2.image="~/images/"+order2.value+".png";
-        order3.image="~/images/"+order3.value+".png";
-        order4.image="~/images/"+order4.value+".png";
-        order5.image="~/images/"+order5.value+".png";
+        order1.image=order1.value;
+        order2.image=order2.value;
+        order3.image=order3.value;
+        order4.image=order4.value;
+        order5.image=order5.value;
 
         this.orderStack = [order1,order2,order3,order4,order5];
         console.log('Contenido de orderStack: ' + JSON.stringify(this.orderStack));

@@ -1,7 +1,7 @@
  <ListView [items]="orders" row="1" width="75">
     <template let-item="item">
         <StackLayout (tap)="onItemTap(item)" width="75" height="75">
-          <Image [src]="item.image"></Image>
+            <ng-robot-smplcomponent [imageview]="item.image" ></ng-robot-smplcomponent>
         </StackLayout>
     </template>
   </ListView>

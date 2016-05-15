@@ -1,5 +1,7 @@
-<DockLayout stretchLastChild="false">
-    <label text="Orders for MIP" class="rail-play" (click)="addOrder()">
-
-    </label>
-</DockLayout>
+<ListView [items]="orderStack">
+    <template let-item="item">
+        <StackLayout height="75">
+            <ng-robot-smplcomponent [imageview]="item.image" ></ng-robot-smplcomponent>
+        </StackLayout>
+    </template>
+</ListView>
