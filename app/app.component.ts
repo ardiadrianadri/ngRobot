@@ -11,7 +11,7 @@ import {OrderComponent} from "./atoms/order/order.component";
     <Button text="TAP" (tap)="onTap()"></Button>
 
     <Label [text]="message" class="message" textWrap="true"></Label>
-    <ng-robot-order></ng-robot-order>
+    <ng-robot-order value="up"></ng-robot-order>
 </StackLayout>
 `,
 })

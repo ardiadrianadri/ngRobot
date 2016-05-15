@@ -1,16 +1,15 @@
 import {Injectable} from "@angular/core";
+import {Order} from "../order/order";
 
 @Injectable()
 export class StoreOrder {
-    //TODO Poner el tipo que corresponda a la clase Order
-    private order:any;
+    private order:Order;
 
-    //TODO Poner el tipo que corresponda al parametro de entradea
-    setOrder (order:any){
+    setOrder (order:Order){
         this.order = order;
     }
-    //TODO Poner el tipo que corresponda de retorno
-    getOrder ():any {
+
+    getOrder ():Order {
         return this.order;
     }
 }
