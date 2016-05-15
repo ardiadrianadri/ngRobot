@@ -8,7 +8,7 @@ var NgRobotButtonComponent = (function () {
     NgRobotButtonComponent.prototype.ngOnInit = function () {
         this.ngRobotButton = new ng_robot_button_1.NgRobotButton('botonPrueba1', function () {
             alert('prueba');
-        });
+        }, null);
     };
     NgRobotButtonComponent.prototype.runCallback = function () {
         this.ngRobotButton.runCallback();
@@ -16,7 +16,8 @@ var NgRobotButtonComponent = (function () {
     NgRobotButtonComponent = __decorate([
         core_1.Component({
             selector: 'ng-robot-button',
-            templateUrl: 'atoms/ngRobotButton/ng-robot-button.template.html'
+            templateUrl: 'atoms/ngRobotButton/ng-robot-button.template.html',
+            styleUrls: ['atoms/ngRobotButton/ng-robot-button.css']
         }), 
         __metadata('design:paramtypes', [])
     ], NgRobotButtonComponent);
