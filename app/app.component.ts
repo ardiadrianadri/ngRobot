@@ -1,8 +1,11 @@
+
 import {Component, Directive} from "@angular/core";
+import {OrderComponent} from "./atoms/order/order.component";
 import {NgRobotButtonComponent} from "./atoms/ngRobotButton/ng-robot-button.component"
 
 @Component({
     selector: "my-app",
+    directives: [OrderComponent, NgRobotButtonComponent],
     template: `
         <StackLayout>
             <Label text="Tap the button" class="title"></Label>
@@ -10,11 +13,9 @@ import {NgRobotButtonComponent} from "./atoms/ngRobotButton/ng-robot-button.comp
             <Button text="TAP" (tap)="onTap()"></Button>
 
             <ng-robot-button></ng-robot-button>
-
             <Label [text]="message" class="message" textWrap="true"></Label>
         </StackLayout>
-    `,
-    directives: [NgRobotButtonComponent]
+    `
 })
 export class AppComponent {
     public counter: number = 16;
