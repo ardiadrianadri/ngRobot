@@ -10,6 +10,11 @@
     },
     "exclude": [
         "node_modules",
-        "platforms"
+        "platforms",
+        "typings/browser",
+        "typings/browser.d.ts"
+    ],
+    "files":[
+        "typings/main.d.ts"
     ]
 }

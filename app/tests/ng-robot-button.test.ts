@@ -1,4 +1,5 @@
-/*import {NgRobotButton} from '../atoms/ngRobotButton/ng-robot-button';
+//first example of a test of ngRobotButton in typescript
+import {NgRobotButton} from '../atoms/ngRobotButton/ng-robot-button';
 
 describe('Testing message and callback in NgRobotBUtton', () => {
 	let buttonName = "buttonName";
@@ -12,4 +13,4 @@ describe('Testing message and callback in NgRobotBUtton', () => {
 	it('should have setted the buttonName', () => {
 		expect(this.app.buttonName).toBe(buttonName);
 	});
-});*/
+});
