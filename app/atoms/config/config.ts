@@ -1,12 +1,8 @@
-declare const Config = {
-    websocketConfig: {
-        url: 'ws://localhost',
-        params: {
-            timeout: 3000,
-            allowCellular: true
-        },
-        code:{
-            noMoreOrders:'001'
-        }
+export const Config = {
+    backService: {
+        url: 'http://localhost'
+    },
+    railsConfig:{
+        style: 'rail-play'
     }
 };

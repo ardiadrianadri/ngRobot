@@ -49,6 +49,6 @@ export class OrderComponent implements OnInit{
         this.orderList.push(obj3);
         this.orderList.push(obj4);
         this.orderList.push(obj5);
-    }
+    }*/
 
 }
