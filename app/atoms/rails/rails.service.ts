@@ -44,4 +44,8 @@ export class RailsService {
 
         this._ws.open();
     }
+    
+    getStack (){
+        return this._rail;
+    }
 }

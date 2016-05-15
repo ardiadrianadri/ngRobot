@@ -8,5 +8,8 @@ declare const Config = {
         code:{
             noMoreOrders:'001'
         }
+    },
+    railsConfig:{
+        style: 'rail-play'
     }
 };
