@@ -1,51 +1,30 @@
-import {Inject} from "@angular/core";
-import {NativeWebSockets} from "nativescript-websockets";
+import {Injectable} from "@angular/core";
+import {Http} from "@angular/http";
+import {Observable} from "rxjs/Rx";
 import {Rails} from "./rails";
 import {Order} from "../order/order";
+import {Config} from "../config/config";
 
-@Inject()
+@Injectable()
 export class RailsService {
     _rail:Rails;
-    _ws: NativeWebSockets;
+    _http:Http;
 
-    _onOpen (socket:any){
-        socket.send(this._rail.pop().value);
-    }
+    response:any;
+    error:any;
 
-    _onMessage(socket:any, message:any){
-        let order:Order = this._rail.pop();
-        if ((message) && (order) && (message === 'OK')){
-            socket.send(order.value);
-        } else {
-            this._ws.close(Config.websocketConfig.code.noMoreOrders, 'No more Orders');
-        }
-    }
-
-    _onClose(socket:any, code:any, reason:any){
-        console.log('Socket closed: '+ code + ', rason: '+ rason);
-    }
-
-    _onError(socket:any, error:any){
-        console.log ('Socket error: ' +error);
-    }
     putOrder (order:Order){
-        this._rail.put(order);
+        this._rail.orders.push(order);
     }
     
-    popOrder(){
-        if (!this._ws){
-            this._ws = new NativeWebSockets(Config.websocketConfig.url, Config.websocketConfig.params);
-        }
-
-        this._ws.on('open',this._onOpen);
-        this._ws.on('message',this._onMessage);
-        this._ws.on('close',this._onClose);
-        this._ws.on('error',this._onError);
-
-        this._ws.open();
+    popOrder():Observable<any> {
+        return this._http.post(Config.backService.url, JSON.stringify(this._rail.orders))
+            .map(response=>this.response = response)
+            .catch(error=>this.error = error);
     }
     
     getStack (){
-        return this._rail;
+        return this._rail.orders;
     }
+
 }
